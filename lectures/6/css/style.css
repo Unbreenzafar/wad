@@ -24,3 +24,31 @@ a {
     margin-bottom: 0;
 
 }
+.article-opt
+{
+    border-radius: 50%;
+    float: right;
+    height: 24px;
+    text-align: center;
+    width: 24px;
+    line-height: 3.5;
+}
+.article-opt:hover
+{
+    color:red;
+}
+.article-overview
+{
+    font-size:75%;
+
+}
+.article-overview a
+{
+    text-decoration: none;
+
+}
+.article-overview a:hover
+{
+    text-decoration: underline;
+
+}
