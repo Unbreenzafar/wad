@@ -4,3 +4,22 @@
 a {
     color: #70579D;
 }
+#main
+{
+    max-width: 800px;
+    margin: auto;
+}
+.article{
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    width: auto;
+    margin: 0 0 10px 0;
+    padding: 10px 12px;
+    background-color: #ffffff;
+}
+.article-name h1{
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
