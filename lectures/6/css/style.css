@@ -52,3 +52,27 @@ a {
     text-decoration: underline;
 
 }
+.pipe
+{
+    color: #ccc;
+    margin: 0 10px;
+}
+.text-muted
+{
+    opacity:0.6;
+}
+.text-small
+{
+    font-size: 85%;
+}
+.lister_list
+{
+    width: 100%;
+    margin-top: 30px;
+}
+.lister_list > .lister_item
+{
+    backgroud-color: #f6f6f5;
+    margin-bottom: 3px;
+    padding: 10px 10px 20px;
+}
