@@ -74,6 +74,59 @@ a {
 {
     backgroud-color: #f6f6f5;
     margin-bottom: 3px;
-    
+
     padding: 10px 10px 20px;
+}
+.lister_list > .lister_item > .lister-item-image
+{
+    display: inline-block;
+}
+.lister_list > .lister_item > .lister-item-image img
+{
+    box-shadow: 3px 2px 3px 1px rgba(0,0,0,0.5);
+    heoght: 200px;
+    width: 120px;
+}
+.lister_list > .lister-item > .lister-item-content
+{
+    width: 80%;
+    float: right;
+}
+.lister_list > .lister-item > .lister-item-content > h3
+{
+    margin: 0 0 0.5em;
+    padding: 0;
+}
+.lister_list > .lister-item > .lister-item-content > h3 > a
+{
+   color: #70579D;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+    padding: 0;
+}
+.lister_list > .lister-item > .lister-item-content > h3 . .lister-item-year
+{
+    font-size:small;
+    font-weight:normal;
+}
+.lister_list > .lister-item > .lister-item-content > h3 . .lister-item-summary {
+    line-height: 140%;
+    font-size: 13px;
+}
+.lister_list > .lister-item > .lister-item-content > h3 . .lister-item-summary::first-letter
+{
+    color: #70579D;
+    font-size: 1.3em;
+}
+p.lister-item-summary::selection
+{
+    color: yellow;
+    background: red;
+}
+.lister-list > ..lister_item > .lister-item-content-a
+{
+    text-decoration: none;
+    color: #70579D;
 }
