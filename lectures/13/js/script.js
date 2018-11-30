@@ -28,10 +28,45 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+    if(currentQuestion<2) {
+        var x = document.querySelector("input[type=radio]:checked");
+        if (x == null) {
+            var q = document.getElementById("quiz-message");
+            var ch = document.getElementById("choice-list");
+            ch.innerHTML = '';
+            q.style.display = 'inline';
+            q.style.color = 'green';
+            q.innerText = 'please select an option first...';
+        }
+        else {
+            if (x.value == questions[currentQuestion].correctAnswer) {
+                correctAnswers++;
+            }
+            var ch = document.getElementById("choice-list");
+            ch.innerHTML = '';
+            currentQuestion++;
+
+        }
+        displayCurrentQuestion();
+    }
+    else
+    {
+        displayScore();
+    }
 }
 
 function displayCurrentQuestion() {
     /*Write your code here */
+
+    var y=document.getElementById("question");
+    y.innerHTML = '<p>'+ questions[currentQuestion].question +'</p>';
+    var ch=document.getElementById("choice-list");
+
+    for(var i =0; i< /*questions[currentQuestion].choices.length*/4; i++)
+    {
+        ch.innerHTML+='<li>'+'<input type="radio" name="checked" value="'+i+'">'+questions[currentQuestion].choices[i]+'</li>';
+    }
+
 }
 
 function resetQuiz() {
