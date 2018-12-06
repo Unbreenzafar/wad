@@ -27,7 +27,7 @@ initialize();
          else {
              document.getElementById("deposit-msg").innerText = "Enter Invalid Amount";
          }
-         
+
 
 
  }
