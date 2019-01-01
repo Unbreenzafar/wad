@@ -1,3 +1,11 @@
+<?php
+require "server/function.php";
+/*mysqli_connect("localhost","root","","insertproduct");
+if(!$con)
+{
+    die("connection failed");
+}*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,12 +46,14 @@
                         <div class="input-group-text"><i class="fas fa-list-alt"></i></div>
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
-                        <option>Select Category</option>
-                        <option>Mobile</option>
+
+                      <!--  <option>Select Category</option>-->
+                        <?php getProductBrand();?>
+                        <!--<option>Mobile</option>
                         <option>Laptop</option>
                         <option>Tablet</option>
                         <option>Watch</option>
-                        <option>Camera</option>
+                        <option>Camera</option>-->
                     </select>
                 </div>
             </div>
@@ -58,13 +68,14 @@
                         <div class="input-group-text"><i class="fas fa-stamp"></i></div>
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
-                        <option>Select Brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Oppo</option>
-                        <option>Dell</option>
-                        <option>HP</option>
-                        <option>Sony</option>
+                       <!-- <option>Select Brand</option>-->
+                        <?php getproductCats();?>
+<!--                        <option>Apple</option>-->
+<!--                        <option>Samsung</option>-->
+<!--                        <option>Oppo</option>-->
+<!--                        <option>Dell</option>-->
+<!--                        <option>HP</option>-->
+<!--                        <option>Sony</option>-->
                     </select>
                 </div>
             </div>
