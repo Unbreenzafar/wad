@@ -1,10 +1,10 @@
 <?php
 require "server/function.php";
-/*mysqli_connect("localhost","root","","insertproduct");
+mysqli_connect("localhost","root","","insertproduct");
 if(!$con)
 {
     die("connection failed");
-}*/
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
