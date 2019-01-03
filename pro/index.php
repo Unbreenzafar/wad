@@ -68,18 +68,6 @@ require "server/Function.php";
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
                    <?php  getproductCats();?>
-                    <!--<li>
-                        <a class="nav-link"  href="#">Laptops</a>
-                    </li>
-                    <li>
-                        <a class="nav-link"  href="#">Computers</a>
-                    </li>
-                    <li>
-                        <a class="nav-link"  href="#">Mobiles</a>
-                    </li>
-                    <li>
-                        <a class="nav-link"  href="#">Tablets</a>
-                    </li>-->
                 </ul>
             </li>
             <li class="active">
