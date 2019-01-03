@@ -48,6 +48,9 @@ function displayNext() {
 
         }
         displayCurrentQuestion();
+
+            displayScore();
+
     }
     else
     {
@@ -62,7 +65,7 @@ function displayCurrentQuestion() {
     y.innerHTML = '<p>'+ questions[currentQuestion].question +'</p>';
     var ch=document.getElementById("choice-list");
 
-    for(var i =0; i< /*questions[currentQuestion].choices.length*/4; i++)
+    for(var i =0; i< questions[currentQuestion].choices.length; i++)
     {
         ch.innerHTML+='<li>'+'<input type="radio" name="checked" value="'+i+'">'+questions[currentQuestion].choices[i]+'</li>';
     }

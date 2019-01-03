@@ -92,8 +92,8 @@ show();*/
 //-----------  STEP - 4 ----------------------
 //============================================
 
-
-/*function getTodos() {
+/*
+function getTodos() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
     if(todos_str !== null)
