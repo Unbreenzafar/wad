@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","techbox");
+$con = mysqli_connect("localhost","root","","insertproduct");
 if(!$con)
     die("Connection failed");
  ?>

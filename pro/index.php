@@ -1,5 +1,5 @@
 <?php
-require "server/function.php";
+require "server/Function.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@ require "server/function.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                   <?php  getCats();?>
+                   <?php  getproductCats();?>
                     <!--<li>
                         <a class="nav-link"  href="#">Laptops</a>
                     </li>
@@ -88,19 +88,8 @@ require "server/function.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php  getBrands();?>
-                   <!-- <li>
-                        <a class="nav-link" href="#">Apple</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Sony</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Dell</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Toshiba</a>
-                    </li>-->
+                    <?php  getProductBrand();?>
+
                 </ul>
             </li>
             <li>
@@ -114,14 +103,20 @@ require "server/function.php";
                     <i class="fas fa-paper-plane"></i>
                     Contact
                 </a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    Products
+                    <?php getproducts();?>
+                </a>
             </li>
         </ul>
     </nav>
+
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
             <div class="col">
-                Content
+                content
             </div>
         </div>
     </article>

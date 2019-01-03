@@ -1,9 +1,21 @@
 <?php
-require "server/function.php";
-mysqli_connect("localhost","root","","insertproduct");
-if(!$con)
+require "Function1.php";
+if(isset($_POST['insert_pro']))
 {
-    die("connection failed");
+
+    $title = $_POST['pro_title'];
+    $cat = $_POST['pro_cat'];
+    $brand = $_POST['pro_brand'];
+    $price = $_POST['pro_price'];
+    $des = $_POST['pro_desc'];
+    $keywords = $_POST['pro_kw'];
+    $insertQuery = "insert into products(p_title,p_cat,p_brand,p_price,p_des,p_keywords) values('$title','$cat','$brand','$price','$des','$keywords');";
+    $result = mysqli_query($con , $insertQuery);
+    //echo $insertQuery;
+    if (!$result)
+    {
+        echo "not executed";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -24,7 +36,7 @@ if(!$con)
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Product </h1>
-    <form>
+    <form action="insert_product.php" method="POST">
         <div class="row">
             <div cclass="col-lg-2 col-md-4 col-sm-3 d-none d-sm-block col-xl-2">
                 <label for="pro_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Product </span> Title:</label>
@@ -47,8 +59,8 @@ if(!$con)
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
 
-                      <!--  <option>Select Category</option>-->
-                        <?php getProductBrand();?>
+                       <option>Select Category</option>
+                        <?php getproductCats();?>
                         <!--<option>Mobile</option>
                         <option>Laptop</option>
                         <option>Tablet</option>
@@ -68,8 +80,8 @@ if(!$con)
                         <div class="input-group-text"><i class="fas fa-stamp"></i></div>
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
-                       <!-- <option>Select Brand</option>-->
-                        <?php getproductCats();?>
+                        <option>Select Brand</option>
+                        <?php getProductBrand();?>
 <!--                        <option>Apple</option>-->
 <!--                        <option>Samsung</option>-->
 <!--                        <option>Oppo</option>-->
@@ -131,7 +143,7 @@ if(!$con)
         <div class="row my-3">
             <div class="col-lg-2 col-md-4 col-sm-3 col-xl-2 d-none d-sm-block"></div>
             <div class="col-lg-3 col-md-6 col-sm-9 col-xl-3">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
+                <button type="submit" name="insert_pro" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
             </div>
         </div>
     </form>
