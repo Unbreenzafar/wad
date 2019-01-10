@@ -1,7 +1,7 @@
-<?php
-require "server/Function.php";
-?>
 <!DOCTYPE html>
+<?php
+require "server/functions.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@ require "server/Function.php";
                                        id="search-bar" name="search"
                                        placeholder="Find Mobile Phones, Laptops, and more..">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-lg" type="button"><i class="fas fa-search"></i></button>
+                                    <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -41,13 +41,13 @@ require "server/Function.php";
                     <div class="col-lg-3 col-md-4 col-sm-5">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-sm-right">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-heart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-heart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"> <span class="sc-fs">Login </span></a>
+                                <a class="nav-link" href="index.html"> <span class="sc-fs">Login </span></a>
                             </li>
                         </ul>
                     </div>
@@ -67,7 +67,7 @@ require "server/Function.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                   <?php  getproductCats();?>
+                    <?php getCats(); ?>
                 </ul>
             </li>
             <li class="active">
@@ -76,8 +76,7 @@ require "server/Function.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php  getProductBrand();?>
-
+                    <?php getBrands(); ?>
                 </ul>
             </li>
             <li>
@@ -91,21 +90,13 @@ require "server/Function.php";
                     <i class="fas fa-paper-plane"></i>
                     Contact
                 </a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle nav-link">
-                    <i class="fas fa-briefcase"></i>
-                    Products
-                    <?php getproducts();?>
-                </a>
             </li>
         </ul>
     </nav>
-
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
-            <div class="col">
-                content
-            </div>
+                <?php getPro(); ?>
         </div>
     </article>
 
