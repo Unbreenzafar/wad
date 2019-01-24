@@ -11,6 +11,23 @@ require "server/functions.php";
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <script>
+        function checkEmail(str) {
+
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("allpros").innerHTML = this.responseText;
+                    }
+                };
+
+                xmlhttp.open("GET", "product.php?search=" + str, true);
+                xmlhttp.send();
+                //document.getElementById('hint').innerHTML = 'loading...';
+        }
+
+    </script>
+</head>
 </head>
 <body>
 
@@ -31,7 +48,8 @@ require "server/functions.php";
                             <div class="input-group">
                                 <input type="search" class="form-control"
                                        id="search-bar" name="search"
-                                       placeholder="Find Mobile Phones, Laptops, and more..">
+                                       placeholder="Find Mobile Phones, Laptops, and more.."
+                                        onkeyup="checkEmail(this.value)" onkeyup="checkEmail1(this.value)">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
@@ -95,7 +113,7 @@ require "server/functions.php";
     </nav>
     <article id="content" class="container-fluid bg-white">
 
-        <div class="row">
+        <div id="allpros" class="row">
                 <?php getPro(); ?>
         </div>
     </article>
